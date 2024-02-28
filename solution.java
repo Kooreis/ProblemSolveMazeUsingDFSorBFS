@@ -1,13 +1,5 @@
-import java.util.Stack;
-
-public class Main {
-    private static int[][] maze = {
-            {0, 1, 0, 0, 0},
-            {0, 0, 0, 1, 0},
-            {1, 1, 0, 1, 1},
-            {0, 0, 0, 0, 0},
-            {1, 1, 1, 1, 0}
-    };
-
-    private static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+public static void main(String[] args) {
+        boolean[][] visited = new boolean[maze.length][maze[0].length];
+        Stack<int[]> stack = new Stack<>();
+        stack.push(new int[]{0, 0});
 }
