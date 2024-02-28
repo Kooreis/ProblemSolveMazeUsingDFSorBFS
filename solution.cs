@@ -1,17 +1,16 @@
 ```C#
-using System;
-using System.Collections.Generic;
-
-public class Program
+public static void Main()
 {
-    static char[,] maze = {
-        { 'S', '#', '#', '#', '#', '#'},
-        { '#', ' ', ' ', ' ', ' ', '#'},
-        { '#', ' ', '#', '#', ' ', '#'},
-        { '#', ' ', '#', '#', ' ', '#'},
-        { '#', ' ', ' ', ' ', ' ', 'E'},
-        { '#', '#', '#', '#', '#', '#'}
-    };
-
-    static List<Tuple<int, int>> path = new List<Tuple<int, int>>();
+    if (DFS(0, 0))
+    {
+        foreach (var step in path)
+        {
+            Console.WriteLine(step);
+        }
+    }
+    else
+    {
+        Console.WriteLine("No path found!");
+    }
+}
 ```
